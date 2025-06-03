@@ -104,6 +104,10 @@ Example steps in Insomnia:
 
 
 
+https://github.com/user-attachments/assets/0d9db7ce-7482-415b-9dd6-e3a20e9a6cd6
+
+
+
 ---
 
 ## 🛠 Technologies Used
