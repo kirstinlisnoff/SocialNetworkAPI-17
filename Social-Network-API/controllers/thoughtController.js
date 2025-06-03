@@ -1,5 +1,5 @@
-const Thought = require('./models/Thought');
-const User = require('./models/User');
+const Thought = require('../models/thought');
+const User = require('../models/user');
 
 module.exports = {
     async getThoughts(req, res) {
@@ -78,9 +78,10 @@ module.exports = {
 
     async addReaction(req, res) {
         try {
+            console.log('Reaction data:', req.body);
             const thought = await Thought.findByIdAndUpdate(
                 req.params.thoughtId,
-                { $addToSet: { reactions: req.body } },
+                { $push: { reactions: req.body } },
                 { new: true, runValidators: true }
             );
             if (!thought) {
